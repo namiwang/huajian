@@ -1,20 +1,22 @@
+# git ignore for built branch
+
 # phonegap
 platforms/
 plugins/
 
 node_modules/
 
-www/bower_components/
+# www/bower_components/
 
 .sass-cache/
 
-#compiled coffee
-www/**/*.js
+# compiled coffee
+# www/**/*.js
 www/**/*.js.map
 
-#compiled sass
-www/**/*.css
+# compiled sass
+# www/**/*.css
 
-#compiled html
-www/index.html
-www/**/*.html
+# compiled html
+# www/index.html
+# www/**/*.html
