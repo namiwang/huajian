@@ -47,7 +47,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: ''
-          src: [ 'www/components/**/*.haml' ]
+          src: [ 'www/index.haml', 'www/components/**/*.haml' ]
           dest: ''
           ext: '.html'
           extDot: 'last'
