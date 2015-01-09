@@ -1,20 +1,19 @@
-# phonegap
-platforms/
-plugins/
-
 node_modules/
 
-www/bower_components/
+# bower_components/
 
 .sass-cache/
 
-#compiled coffee
-www/**/*.js
-www/**/*.js.map
+# compiled coffee
+# scripts/**/*.js
+# scripts/**/*.js.map
+# components/**/*.js
+# components/**/*.js.map
 
-#compiled sass
-www/**/*.css
+# compiled sass
+# styles/**/*.css
+# components/**/*.css
 
-#compiled html
-www/index.html
-www/**/*.html
+# compiled html
+# index.html
+# components/**/*.html
