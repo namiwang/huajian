@@ -1,15 +1,31 @@
+<link href='../../bower_components/core-signals/core-signals.html' rel='import'>
+<link href='../../bower_components/core-animated-pages/core-animated-pages.html' rel='import'>
 <link href='../../bower_components/core-header-panel/core-header-panel.html' rel='import'>
 <link href='../../bower_components/core-toolbar/core-toolbar.html' rel='import'>
 <link href='../../bower_components/paper-icon-button/paper-icon-button.html' rel='import'>
-<polymer-element flex layout name='huajian-app' vertical>
+<link href='../base/base.html' rel='import'>
+<link href='../poem-show/poem-show.html' rel='import'>
+<polymer-element extends='huajian-base' flex layout name='huajian-app' vertical>
   <template>
     <link href='./app.css' rel='stylesheet'>
+    <core-signals on-core-signal-app-switch-current-screen='{{ app_switch_current_screen }}'></core-signals>
     <core-header-panel flex>
       <core-toolbar>
+        <paper-icon-button icon='menu'></paper-icon-button>
         <paper-icon-button icon='arrow-back'></paper-icon-button>
         <span flex>Title</span>
       </core-toolbar>
-      <p>sample content</p>
+      <core-animated-pages selected='{{selected}}' transitions='cross-fade-all'>
+        <section name='poem-index'>
+          <div class='poem-card' on-tap='{{ switch_current_screen_to_poem_show }}'>
+            <header>title</header>
+            <section>content</section>
+          </div>
+        </section>
+        <section name='poem-show'>
+          <huajian-poem-show></huajian-poem-show>
+        </section>
+      </core-animated-pages>
     </core-header-panel>
   </template>
   <script src='./app.js'></script>

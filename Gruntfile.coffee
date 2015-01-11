@@ -11,7 +11,7 @@ module.exports = (grunt) ->
           expand: true
           flatten: false
           cwd: ''
-          src: [ 'www/components/**/*.coffee', 'www/scripts/*.coffee' ]
+          src: [ 'components/**/*.coffee', 'scripts/*.coffee' ]
           dest: ''
           ext: '.js'
           extDot: 'last'
@@ -33,7 +33,7 @@ module.exports = (grunt) ->
           expand: true
           flatten: false
           cwd: ''
-          src: [ 'www/components/**/*.sass', 'www/styles/*.sass' ]
+          src: [ 'components/**/*.sass', 'styles/*.sass' ]
           dest: ''
           ext: '.css'
           extDot: 'last'
@@ -47,7 +47,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: ''
-          src: [ 'www/index.haml', 'www/components/**/*.haml' ]
+          src: [ 'index.haml', 'components/**/*.haml' ]
           dest: ''
           ext: '.html'
           extDot: 'last'

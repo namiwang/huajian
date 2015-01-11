@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "poem-show.js",
+  "sourceRoot": "",
+  "sources": [
+    "poem-show.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAA,CACE;AAAA,IAAA,QAAA,EAAU,SAAA,GAAA,CAAV;GADF,CAAA,CAAA;AAAA"
+}

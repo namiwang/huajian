@@ -1,6 +1,14 @@
 (function() {
   Polymer({
-    domReady: function() {}
+    selected: 'poem-index',
+    domReady: function() {},
+    app_switch_current_screen: function(e, data, sender) {
+      this.selected = data.screen_name;
+      switch (data.screen_name) {
+        case 'nation':
+          return this.$.nationScreen.nationId = data.data.nation_id;
+      }
+    }
   });
 
 }).call(this);
