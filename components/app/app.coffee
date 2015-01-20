@@ -2,6 +2,7 @@ Polymer
   selected: 'poem-index'
 
   domReady: ->
+    @super()
 
   app_switch_current_screen: (e, data, sender) ->
     @selected = data.screen_name

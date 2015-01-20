@@ -1,7 +1,9 @@
 (function() {
   Polymer({
     selected: 'poem-index',
-    domReady: function() {},
+    domReady: function() {
+      return this["super"]();
+    },
     app_switch_current_screen: function(e, data, sender) {
       this.selected = data.screen_name;
       switch (data.screen_name) {

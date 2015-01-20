@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "word-new-inline.js",
+  "sourceRoot": "",
+  "sources": [
+    "word-new-inline.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAA,CACE;AAAA,IAAA,cAAA,EAAgB,SAAC,CAAD,GAAA;aACd,OAAO,CAAC,GAAR,CAAY,MAAZ,EADc;IAAA,CAAhB;GADF,CAAA,CAAA;AAAA"
+}

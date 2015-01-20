@@ -1,0 +1,11 @@
+<link href='../base/base.html' rel='import'>
+<polymer-element extends='huajian-base' name='huajian-poem-index'>
+  <template>
+    <link href='./poem-index.css' rel='stylesheet'>
+    <div class='poem-card' on-tap='{{ switch_current_screen_to_poem_show }}'>
+      <header>title</header>
+      <section>content</section>
+    </div>
+  </template>
+  <script src='./poem-index.js'></script>
+</polymer-element>

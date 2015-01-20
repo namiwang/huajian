@@ -4,7 +4,10 @@
 <link href='../../bower_components/core-toolbar/core-toolbar.html' rel='import'>
 <link href='../../bower_components/paper-icon-button/paper-icon-button.html' rel='import'>
 <link href='../base/base.html' rel='import'>
+<link href='../poem-index/poem-index.html' rel='import'>
 <link href='../poem-show/poem-show.html' rel='import'>
+<link href='../poem-new/poem-new.html' rel='import'>
+<link href='../word-new/word-new.html' rel='import'>
 <polymer-element extends='huajian-base' flex layout name='huajian-app' vertical>
   <template>
     <link href='./app.css' rel='stylesheet'>
@@ -14,16 +17,20 @@
         <paper-icon-button icon='menu'></paper-icon-button>
         <paper-icon-button icon='arrow-back'></paper-icon-button>
         <span flex>Title</span>
+        <paper-icon-button icon='create' on-tap='{{ switch_current_screen_to_poem_new }}'></paper-icon-button>
       </core-toolbar>
       <core-animated-pages selected='{{selected}}' transitions='cross-fade-all'>
         <section name='poem-index'>
-          <div class='poem-card' on-tap='{{ switch_current_screen_to_poem_show }}'>
-            <header>title</header>
-            <section>content</section>
-          </div>
+          <huajian-poem-index></huajian-poem-index>
         </section>
         <section name='poem-show'>
           <huajian-poem-show></huajian-poem-show>
+        </section>
+        <section name='poem-new'>
+          <huajian-poem-new></huajian-poem-new>
+        </section>
+        <section name='word-new'>
+          <huajian-word-new></huajian-word-new>
         </section>
       </core-animated-pages>
     </core-header-panel>

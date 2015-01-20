@@ -1,0 +1,14 @@
+<link href='../../bower_components/paper-item/paper-item.html' rel='import'>
+<link href='../base/base.html' rel='import'>
+<polymer-element extends='huajian-base' name='huajian-word-new-inline'>
+  <template>
+    <link href='./word-new-inline.css' rel='stylesheet'>
+    <paper-item on-tap='{{ input_item_tap }}'>
+      <paper-input></paper-input>
+    </paper-item>
+    <paper-item on-tap='{{ switch_current_screen_to_word_new }}'>
+      select word
+    </paper-item>
+  </template>
+  <script src='./word-new-inline.js'></script>
+</polymer-element>

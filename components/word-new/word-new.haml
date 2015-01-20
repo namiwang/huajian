@@ -1,0 +1,18 @@
+%link{rel: 'import', href: '../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html'}
+%link{rel: 'import', href: '../../bower_components/paper-dropdown/paper-dropdown.html'}
+%link{rel: 'import', href: '../../bower_components/core-menu/core-menu.html'}
+%link{rel: 'import', href: '../../bower_components/paper-item/paper-item.html'}
+
+%link{rel: 'import', href: '../base/base.html'}
+
+%polymer-element{name: 'huajian-word-new', extends: 'huajian-base'}
+  %template
+    %link{rel: 'stylesheet', href: './word-new.css'}
+
+    %paper-dropdown-menu{label: 'type'}
+      %paper-dropdown.dropdown
+        %core-menu
+          %paper-item type a
+          %paper-item type b
+
+  %script{src: './word-new.js'}

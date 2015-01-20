@@ -1,10 +1,11 @@
 %link{rel: 'import', href: '../base/base.html'}
+%link{rel: 'import', href: '../word-show/word-show.html'}
 
-%polymer-element{name: 'huajian-poem-show', extends: 'guoce-base'}
+%polymer-element{name: 'huajian-poem-show', extends: 'huajian-base'}
   %template
     %link{rel: 'stylesheet', href: './poem-show.css'}
 
-    %div
-      poem-show
+    poem-show
+    %huajian-word-show{editable: 'false'}
 
   %script{src: './poem-show.js'}

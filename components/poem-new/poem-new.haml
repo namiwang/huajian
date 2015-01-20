@@ -1,0 +1,10 @@
+%link{rel: 'import', href: '../base/base.html'}
+%link{rel: 'import', href: '../word-show/word-show.html'}
+
+%polymer-element{name: 'huajian-poem-new', extends: 'huajian-base'}
+  %template
+    %link{rel: 'stylesheet', href: './poem-new.css'}
+
+    %huajian-word-show{editable: 'true'}
+
+  %script{src: './poem-new.js'}

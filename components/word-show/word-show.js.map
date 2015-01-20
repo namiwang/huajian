@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "word-show.js",
+  "sourceRoot": "",
+  "sources": [
+    "word-show.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,EAAA,OAAA,CACE;AAAA,IAAA,eAAA,EAAiB,SAAC,SAAD,EAAY,SAAZ,GAAA;AAGf,cAAO,SAAP;AAAA,aACO,MADP;iBAEI,IAAC,CAAA,QAAD,GAAY,KAFhB;AAAA,aAGO,OAHP;iBAII,IAAC,CAAA,QAAD,GAAY,MAJhB;AAAA,OAHe;IAAA,CAAjB;GADF,CAAA,CAAA;AAAA"
+}

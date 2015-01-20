@@ -1,5 +1,9 @@
 (function() {
   Polymer({
+    ready: function() {
+      this.screens = ['poem_show', 'poem_new', 'word_new'];
+      return this.create_methods_for_switching_current_screen();
+    },
     domReady: function() {
       return this.fill_partials();
     },
@@ -29,8 +33,17 @@
         }
       });
     },
-    switch_current_screen_to_poem_show: function() {
-      return this.switch_current_screen('poem-show');
+    create_methods_for_switching_current_screen: function() {
+      var method_body, screen, screen_name, _i, _len, _ref, _results;
+      _ref = this.screens;
+      _results = [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        screen = _ref[_i];
+        screen_name = screen.replace(/_/g, '-');
+        method_body = "this.switch_current_screen( \'" + screen_name + "\' )";
+        _results.push(this["switch_current_screen_to_" + screen] = new Function(method_body));
+      }
+      return _results;
     }
   });
 

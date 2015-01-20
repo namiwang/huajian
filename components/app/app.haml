@@ -5,7 +5,10 @@
 %link{rel: 'import', href: '../../bower_components/paper-icon-button/paper-icon-button.html'}
 
 %link{rel: 'import', href: '../base/base.html'}
+%link{rel: 'import', href: '../poem-index/poem-index.html'}
 %link{rel: 'import', href: '../poem-show/poem-show.html'}
+%link{rel: 'import', href: '../poem-new/poem-new.html'}
+%link{rel: 'import', href: '../word-new/word-new.html'}
 
 %polymer-element{name: 'huajian-app', extends: 'huajian-base'}(flex vertical layout)
   %template
@@ -22,14 +25,19 @@
         %paper-icon-button{icon: 'menu'}
         %paper-icon-button{icon: 'arrow-back'}
         %span(flex) Title
+        %paper-icon-button{icon: 'create', 'on-tap' => '{{ switch_current_screen_to_poem_new }}'}
 
       %core-animated-pages{ selected: '{{selected}}', transitions: 'cross-fade-all' }
         %section{name: 'poem-index'}
-          %div.poem-card{'on-tap' => '{{ switch_current_screen_to_poem_show }}'}
-            %header title
-            %section content
+          %huajian-poem-index
 
         %section{name: 'poem-show'}
           %huajian-poem-show
+
+        %section{name: 'poem-new'}
+          %huajian-poem-new
+
+        %section{name: 'word-new'}
+          %huajian-word-new
 
   %script{src: './app.js'}

@@ -1,4 +1,8 @@
 Polymer
+  ready: ->
+    @screens = [ 'poem_show', 'poem_new', 'word_new' ]
+    @create_methods_for_switching_current_screen()
+
   domReady: ->
     @fill_partials()
 
@@ -19,6 +23,10 @@ Polymer
         screen_name: screen_name
         data: data
 
-  switch_current_screen_to_poem_show: -> @switch_current_screen 'poem-show'
+  create_methods_for_switching_current_screen: ->
+    for screen in @screens
+      screen_name = screen.replace /_/g, '-'
+      method_body = "this.switch_current_screen( \'#{screen_name}\' )"
+      @["switch_current_screen_to_#{screen}"] = new Function method_body
 
   # open_menu_drawer: ->

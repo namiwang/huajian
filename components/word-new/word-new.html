@@ -1,0 +1,19 @@
+<link href='../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html' rel='import'>
+<link href='../../bower_components/paper-dropdown/paper-dropdown.html' rel='import'>
+<link href='../../bower_components/core-menu/core-menu.html' rel='import'>
+<link href='../../bower_components/paper-item/paper-item.html' rel='import'>
+<link href='../base/base.html' rel='import'>
+<polymer-element extends='huajian-base' name='huajian-word-new'>
+  <template>
+    <link href='./word-new.css' rel='stylesheet'>
+    <paper-dropdown-menu label='type'>
+      <paper-dropdown class='dropdown'>
+        <core-menu>
+          <paper-item>type a</paper-item>
+          <paper-item>type b</paper-item>
+        </core-menu>
+      </paper-dropdown>
+    </paper-dropdown-menu>
+  </template>
+  <script src='./word-new.js'></script>
+</polymer-element>
